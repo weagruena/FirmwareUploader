@@ -1,0 +1,3 @@
+server=localhost
+port=91000
+file=sihpP1005.dl
