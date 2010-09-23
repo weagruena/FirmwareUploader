@@ -1,0 +1,61 @@
+FirmwareUploader
+==============
+&copy; 2010  |  [ruby.gruena.net][gruena]
+
+
+Why ?
+------
+
+Do you have computer hardware (printers ...) with no firmware inside ?
+
+These devices needs their firmware each time you switch on.
+
+But if you use this hardware on special "boxes" (router, printserver ...) you can have problems.
+
+
+**Example:**
+
+Printer: *HP LaserJet P1005* (no internal firmware) 
+
+=> [HP product page][HPLJP1005]
+
+* you have to load the firmware after switching on
+* you have problems when the printer is not connected directly to your
+   machine / connected to printer server (samba, cups etc.)
+
+Function
+---------
+Upload your firmware to printers etc. over TCP/IP
+
+   
+Usage
+------
+
+**Configuration** for FirmwareUploader inside "config.txt"
+
+<table border="1">
+  <tr>
+      <td><b>server</b></td>
+      <td>IP address / host name of server</td>
+  </tr>
+  <tr>
+      <td><b>port</b></td>
+      <td>Port number of server</td>
+  </tr>
+  <tr>
+      <td><b>file</b></td>
+      <td>Firmware file name *)</td>
+  </tr>
+</table>
+
+*) for example: "sihpP1005.dl" (for HP LJ P1005)
+
+**Start**
+
+Installation (setup) of FirmwareUploader places a link inside windows autostart folder => automatic startup when windows start
+
+"upload.exe" looks inside your configuration and transmit the firmware file to server.
+        
+
+[gruena]: ruby.gruena.net
+[HPLJP1005]: http://h10010.www1.hp.com/wwpc/us/en/sm/WF10a/18972-18972-3328059-14638-3328066-3435674.html?jumpid=reg_R1002_USEN
