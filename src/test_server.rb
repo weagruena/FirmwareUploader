@@ -1,5 +1,8 @@
 require 'socket'
 
+# Exit while compiling
+exit if Object.const_defined?(:Ocra)
+
 cfg = 'config.txt'
 cfgs = {}
 
@@ -8,7 +11,9 @@ if File.exists?(cfg)
 	
 	File.open(cfg, 'r') do |f| 
 		f.readlines.each do |line|
-			cfgs[line.split('=')[0]] = line.split('=')[1]
+			if line[0..1] != "# "
+				cfgs[line.split('=')[0]] = line.split('=')[1]
+			end	
 		end	
 	end
 	server = cfgs['server'].chomp

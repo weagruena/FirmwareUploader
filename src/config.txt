@@ -1,3 +1,9 @@
+# IP or server name
 server=localhost
+# 
+# Server port
 port=91000
+# 
+# Firmware file
 file=sihpP1005.dl
+# 
